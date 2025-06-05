@@ -1,15 +1,21 @@
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <h1>Hello, {{ name }} Your Current Age is {{ age + 10 }} year old</h1>
+      <h1>Hello, {{ name_student }} 12 Your Current Age is {{ age + 10 }} year old</h1>
       <br>
       <br>
       <label for="name">Name: </label>
-      <input id="name" type="text" [(ngModel)]="name">
+      <input id="name" type="text" [(ngModel)]="name_student">
       <br>
       <br>
       <label for="age">Age: </label>
       <input id="age" type="number" [(ngModel)]="age">
+      <hr>
+      <input type="button" value="save" (click)="changeData()">
+      <br>
+      <ul>
+        <li *ngFor="let item of student_list; let i = index">{{ item.id }} - {{ item.name }} - {{ item.age }}</li>
+      </ul>
     </div>
   </div>
 </main>
