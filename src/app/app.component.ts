@@ -5,8 +5,8 @@ import {NgFor} from '@angular/common';
 
 interface student {
   id: number,
-  name:string,
-  age:number,
+  name: string,
+  age: number,
 }
 
 @Component({
@@ -22,7 +22,8 @@ interface student {
 export class AppComponent {
   student_list: student [] = []
   name_student: string = '';
-  age:number = 0;
+  age: number = 0;
+  teacher_name: string = '';
 
   changeData() {
     this.student_list.push(
@@ -37,7 +38,7 @@ export class AppComponent {
     this.clearForm()
   }
 
-  clearForm(){
+  clearForm() {
     this.name_student = ''
     this.age = 0
   }
