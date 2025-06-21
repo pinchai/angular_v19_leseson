@@ -2,44 +2,37 @@ import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {NgFor} from '@angular/common';
-
-interface student {
-  id: number,
-  name: string,
-  age: number,
-}
+import {AboutComponent} from './about/about.component'
+import {ContactComponent} from './contact/contact.component'
+import {TopBannerComponent} from './top-banner/top-banner.component';
+import {TopMenuComponent} from './top-menu/top-menu.component';
+import {MainContentComponent} from './main-content/main-content.component';
+import {AsideComponent} from './aside/aside.component';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
     FormsModule,
-    NgFor
+    AboutComponent,
+    ContactComponent,
+    TopBannerComponent,
+    TopMenuComponent,
+    MainContentComponent,
+    AsideComponent,
+    // NgFor
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  student_list: student [] = []
-  name_student: string = '';
-  age: number = 0;
-  teacher_name: string = '';
+  message: string = 'Hello SV7';
 
-  changeData() {
-    this.student_list.push(
-      {
-        id: 1,
-        name: this.name_student,
-        age: this.age
-      },
-    )
-
-    //clearForm
-    this.clearForm()
-  }
-
-  clearForm() {
-    this.name_student = ''
-    this.age = 0
+  greeting(): void {
+    if (this.message === 'Hello SV7') {
+      this.message = "Hello World"
+    } else {
+      this.message = 'Hello SV7'
+    }
   }
 }

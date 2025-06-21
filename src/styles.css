@@ -1,1 +1,223 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #ffe700;
+  margin: 0;
+  font-family: Arial, 'Khmer OS Battambang', sans-serif;
+  color: #222;
+}
+
+.header-bg {
+  background: linear-gradient(120deg, #ffe700 70%, #fff8c2 100%);
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 200px;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 30px;
+  box-shadow: 0 4px 20px #ddd;
+  border-radius: 6px;
+  padding-bottom: 25px;
+  min-height: 800px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 0 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  width: 100%;
+  height: 85px;
+}
+
+.kh-title {
+  color: #1ec147;
+  font-size: 28px;
+  font-family: 'Khmer OS Battambang', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.en-title {
+  color: #2572ce;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-right {
+  font-weight: bold;
+  color: #7fff21;
+  font-size: 20px;
+  text-align: right;
+  text-shadow: 1px 1px 2px #289d36, 0 0 10px #fff;
+}
+
+nav {
+  margin-top: 25px;
+  background: linear-gradient(90deg, #209e42 60%, #24967e 100%);
+  padding: 0 10px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 1px 5px #ccc;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0; padding: 0;
+  align-items: center;
+  height: 44px;
+}
+
+nav li {
+  color: #fff;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 17px;
+  line-height: 44px;
+}
+
+nav li.active, nav li:hover {
+  background: #158c36;
+  border-radius: 4px;
+}
+
+.lang-flag {
+  width: 26px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.main {
+  display: flex;
+  margin: 20px 30px 0 30px;
+  gap: 28px;
+}
+
+main {
+  flex: 3;
+  min-width: 0;
+}
+
+aside {
+  flex: 1;
+  min-width: 220px;
+}
+
+.flash-warning {
+  background: #f0f0f0;
+  color: #aaa;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 8px;
+}
+.flash-icon {
+  font-size: 22px;
+}
+
+.content-text {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.content-text .highlighted {
+  font-weight: bold;
+  color: #209e42;
+  margin-top: 15px;
+}
+
+.mis-block {
+}
+
+.mis-img img {
+  width: 100%;
+  object-fit: cover;
+  margin: 15px;
+}
+
+.mis-info {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+.mis-title {
+  color: #1371bc;
+  font-size: 27px;
+  font-family: 'Khmer OS Battambang', Arial, sans-serif;
+  font-weight: bold;
+}
+.mis-subtitle {
+  color: #209e42;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mtcna-block {
+  display: flex;
+  align-items: center;
+  border: 2px solid #209e42;
+  border-radius: 6px;
+  background: #f7fff6;
+  margin-bottom: 10px;
+  padding: 12px;
+  gap: 18px;
+}
+
+.mikrotik-img {
+  width: 110px;
+}
+
+.mtcna-info {
+  color: #1371bc;
+  font-size: 16px;
+}
+
+aside .announcement {
+  border: 1px solid #209e42;
+  border-radius: 6px;
+  background: #e8f8ec;
+  margin-bottom: 16px;
+  text-align: center;
+  padding: 10px 0 5px 0;
+}
+.ann-title {
+  color: #888;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.aside-logo {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.aside-img img, .campus-photo img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 13px;
+  box-shadow: 0 2px 8px #eee;
+}
+
+.visitor {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #888;
+  font-weight: bold;
+  text-align: center;
+}
