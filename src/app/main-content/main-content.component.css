@@ -1,0 +1,12 @@
+.text_danger {
+  color: red;
+}
+
+.text_success {
+  color: green;
+}
+
+.text_bold {
+  font-weight: bolder;
+  font-size: 30px;
+}

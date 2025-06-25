@@ -5,13 +5,30 @@
     <div class="highlighted">Begin Your Education With Us, End With Job Opportunity</div>
   </div>
   <div class="mis-block">
+    {{ [{name: 'dara', gender: 'male'}] | json }}<!-- €1,234.00 -->
+
+    <hr>
+    <input type="button" value="Chang Image" (click)="changeImage()">
+    <hr>
+    <input type="button" value="Increase Age" (click)="increaseAge()">
+    <input type="button" value="Decrease Age" (click)="decreaseAge()">
+
+    <h3 [class]="age >= 18 ? 'text_success text_bold' : 'text_danger'">Age: {{ age }}</h3>
+    <h3 [ngClass]="age >= 18 ? ['text_success', 'text_bold'] : 'text_danger'">Age: {{ age }}</h3>
+    <h3 [ngClass]="age >= 18 ? {text_success: true, text_bold: true} : 'text_danger'">Age: {{ age }}</h3>
+    <input [disabled]="age >= 18 ? false : true" type="button" value="View Detail" (click)="viewDetail()">
+    <hr>
+    <h3 [ngStyle]="{
+      'color': age < 18 ? 'red' : 'green',
+      'font-size': age+'px'
+      }">Age: {{ age }}</h3>
     <div class="mis-img">
-      <img src="/mis.jpg" alt="Students">
+      <img [src]="image" alt="Students">
     </div>
   </div>
   <div class="mis-block">
     <div class="mis-img">
-      <img src="/mis.jpg" alt="Students">
+      <img [src]="image" alt="Students">
     </div>
   </div>
 </main>
